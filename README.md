@@ -8,7 +8,7 @@ Installation
 
 Example - chocolate table
 -------------------------
-<code>
+<pre>
 <?php
     class 001_chocolate extends MyMigration {
         function up() {
@@ -20,4 +20,4 @@ Example - chocolate table
         }
     }
 ?>
-</code>
+</pre>
