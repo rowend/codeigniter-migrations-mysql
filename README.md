@@ -11,12 +11,18 @@ Example - chocolate table
 ```php
 <?php
     class 001_chocolate extends MyMigration {
+
+        var $table;
+        function __construct() {
+            $this->table = 'chocolate';
+        }
+
         function up() {
 
         }
 
         function down() {
-
+            $this->dbforge->drop_table($this->table);
         }
     }
 ?>
