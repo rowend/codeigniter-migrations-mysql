@@ -27,3 +27,11 @@ Example - chocolate table
     }
 ?>
 ```
+Todo
+-------------------------
+* Other sql support
+* foreign key
+* unique
+* charset
+* sql_extra
+* your suggestions
