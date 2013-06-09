@@ -9,7 +9,7 @@ Installation
 
 Supported Features
 ------------
-1 - MySQL innodb tables
+1 - MySQL innodb tables, to make a table Innodb you need colocate a config file
 
 Example - chocolate table
 -------------------------
@@ -57,6 +57,7 @@ Example - chocolate table
 Todo
 -------------------------
 * Other sql support
+* table validation si no viene, fields validations si no viene,
 * foreign key
 * unique
 * charset to fields and table
