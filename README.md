@@ -1,10 +1,15 @@
 MySQL CodeIgniter Wrapper for CodeIgniter
 =========================================
+Open Source Class
 
 Installation
 ------------
 1 - Copy and paste mymigration.php file insede of migrations folder
 2 - Then your migrations class need to extends to MyMigration class
+
+Supported Features
+------------
+1 - MySQL innodb tables
 
 Example - chocolate table
 -------------------------
