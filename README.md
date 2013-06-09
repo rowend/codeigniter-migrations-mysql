@@ -23,7 +23,29 @@ Example - chocolate table
         }
 
         function up() {
-
+            $name = array(
+                'type' => 'varchar',
+                'constraint' => 40,
+            );
+            $color = array(
+                'type' => 'varchar',
+                'constraint' => 10,
+            );
+            $flavor = array(
+                'type' => 'varchar',
+                'constraint' => 10,
+            );
+            $fields = array(
+                'name' => $name,
+                'color' => $color,
+                'flavor' => $flavor
+            );
+            $config = array(
+                'table' => $this->table,
+                'fields' => $fields,
+                'innodb' => TRUE
+            );
+            $this->create_table($config);
         }
 
         function down() {
@@ -37,6 +59,6 @@ Todo
 * Other sql support
 * foreign key
 * unique
-* charset
+* charset to fields and table
 * sql_extra
 * your suggestions
