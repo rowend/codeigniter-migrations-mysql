@@ -9,7 +9,8 @@ Installation
 
 Supported Features
 ------------
-1 - MySQL innodb tables, to make a table Innodb you need colocate a config file
+1 - MySQL innodb tables, to make a table Innodb you need colocate
+    an innodb => TRUE configuration
 
 Example - chocolate table
 -------------------------
