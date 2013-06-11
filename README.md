@@ -10,7 +10,9 @@ Installation
 Supported Features
 ------------
 1 - MySQL innodb tables, to make a table Innodb you need colocate
-    an innodb => TRUE configuration
+    an innodb => TRUE in config array
+2 - MySQL unique fields, to make a field unique you need to colocate
+    an unique => TRUE in field config
 
 Example - chocolate table
 -------------------------
@@ -27,6 +29,7 @@ Example - chocolate table
             $name = array(
                 'type' => 'varchar',
                 'constraint' => 40,
+                'unique' => TRUE, //unique field
             );
             $color = array(
                 'type' => 'varchar',
@@ -44,7 +47,7 @@ Example - chocolate table
             $config = array(
                 'table' => $this->table,
                 'fields' => $fields,
-                'innodb' => TRUE
+                'innodb' => TRUE //InnoDB
             );
             $this->create_table($config);
         }
@@ -64,3 +67,4 @@ Todo
 * charset to fields and table
 * sql_extra
 * your suggestions
+* get database motor
