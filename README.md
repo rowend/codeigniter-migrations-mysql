@@ -1,4 +1,4 @@
-MySQL CodeIgniter Wrapper for CodeIgniter
+MySQL Migration Wrapper for CodeIgniter
 =========================================
 Open Source Class
 
