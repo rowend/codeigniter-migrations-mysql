@@ -67,3 +67,4 @@ Todo
 * charset to fields and table
 * sql_extra
 * your suggestions
+* get database motor
