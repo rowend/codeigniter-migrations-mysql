@@ -13,6 +13,8 @@ Supported Features
     an innodb => TRUE in config array
 2. MySQL unique fields, to make a field unique you need to colocate
     an unique => TRUE in field config
+3. MySQL primary key fields, to make a field unique you need to colocate
+    an unique => TRUE in field config
 
 Example - chocolate table
 -------------------------
