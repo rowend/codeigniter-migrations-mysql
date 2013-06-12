@@ -14,7 +14,7 @@ Supported Features
 2. MySQL unique fields, to make a field unique you need to colocate
     an unique => TRUE in field config
 3. MySQL primary key fields, to make a field unique you need to colocate
-    an unique => TRUE in field config
+    an primary_key => TRUE in field config
 
 Example - chocolate table
 -------------------------
@@ -28,6 +28,14 @@ Example - chocolate table
         }
 
         function up() {
+            $id = array(
+                'type' => 'int',
+                'constraint' => 10,
+                'unsigned' => TRUE,
+                'null' => FALSE,
+                'auto_increment' => TRUE,
+                'primary_key' => TRUE, //primary_key
+            );
             $name = array(
                 'type' => 'varchar',
                 'constraint' => 40,
@@ -42,6 +50,7 @@ Example - chocolate table
                 'constraint' => 10,
             );
             $fields = array(
+                'id' => $id,
                 'name' => $name,
                 'color' => $color,
                 'flavor' => $flavor
