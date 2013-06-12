@@ -9,9 +9,9 @@ Installation
 
 Supported Features
 ------------
-1 - MySQL innodb tables, to make a table Innodb you need colocate
+1. MySQL innodb tables, to make a table Innodb you need colocate
     an innodb => TRUE in config array
-2 - MySQL unique fields, to make a field unique you need to colocate
+2. MySQL unique fields, to make a field unique you need to colocate
     an unique => TRUE in field config
 
 Example - chocolate table
