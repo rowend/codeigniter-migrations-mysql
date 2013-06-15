@@ -74,7 +74,6 @@ Todo
 * Other sql support
 * table validation si no viene, fields validations si no viene,
 * foreign key
-* unique
 * charset to fields and table
 * sql_extra
 * your suggestions
