@@ -18,12 +18,27 @@
             }
         }
 
-        function unique($fields=array(), $table='') {
+        function unique($table='', $fields=array(), ) {
             foreach ($fields as $key => $field) {
                 if(isset($field['unique']) && $field['unique'] === TRUE) {
                     $sql = "ALTER TABLE
                                 `$table`
                             ADD UNIQUE (`$key`)";
+                    $this->db->query($sql);
+                }
+            }
+        }
+
+        function foreigns_keys($table, $fields=array()) {
+            foreach ($fields as $key => $field) {
+                $table_help = '$table'.'_ibfk';
+                if(isset($field['foreign_key']) && $field['foreign_key']) {
+                    $to_table = $field['foreign_key']['table'];
+                    $to_field = $field['foreign_key']['field'];
+                    $sql = "ALTER TABLE  `$table`
+                            ADD CONSTRAINT `$table_help$key`
+                            FOREIGN KEY (`$key`)
+                            REFERENCES `$to_table` (`$to_field`)";
                     $this->db->query($sql);
                 }
             }
@@ -36,7 +51,8 @@
             $this->primary_key($fields);
             $this->dbforge->create_table($table, TRUE);
             $this->innodb($config);
-            $this->unique($fields, $table);
+            $this->unique($table, $fields);
+            $this->foreigns_keys($table, $fields);
         }
 
     }
