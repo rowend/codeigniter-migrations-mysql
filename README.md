@@ -15,6 +15,8 @@ Supported Features
     an unique => TRUE in field config
 3. MySQL primary key fields, to make a field unique you need to colocate
     an primary_key => TRUE in field config
+4. MySQL primary foreign key fields, to create relations you need to colocate
+    an array with field and table.
 
 Example - chocolate table
 -------------------------
@@ -49,11 +51,22 @@ Example - chocolate table
                 'type' => 'varchar',
                 'constraint' => 10,
             );
+            $provider_id = array(
+                'type' => 'int',
+                'constraint' => 10,
+                'unsigned' => TRUE,
+                'null' => FALSE,
+                'foreign_key' => array( //relationship
+                    'table' => 'provider' // table to
+                    'field' => 'id' // field to
+                )
+            );
             $fields = array(
                 'id' => $id,
                 'name' => $name,
                 'color' => $color,
                 'flavor' => $flavor
+                'provider_id' => $provider_id
             );
             $config = array(
                 'table' => $this->table,
