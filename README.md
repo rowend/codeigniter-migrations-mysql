@@ -17,6 +17,8 @@ Supported Features
     an primary_key => TRUE in field config
 4. MySQL primary foreign key fields, to create relations you need to colocate
     an array with field and table.
+5. MySQL extra, this is an array with sql string to be exectued.
+    This array is placed in table config. Is useful to create some structure tables.
 
 Example - chocolate table
 -------------------------
@@ -90,3 +92,5 @@ Todo
 * sql_extra
 * your suggestions
 * get database motor
+* version de codeigniter
+* testear
